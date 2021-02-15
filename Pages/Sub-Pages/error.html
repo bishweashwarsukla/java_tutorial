@@ -1,0 +1,235 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Errors - Throw and Try to Catch</h1>
+        <div class="basic">
+            <p>
+                The <span class="textcolor">try</span> statement lets you test a block of code for errors.
+                <br>
+                The <span class="textcolor">catch</span> statement lets you handle the error.
+                <br>
+                The <span class="textcolor">throw</span> statement lets you create custom errors.
+                <br>
+                The <span class="textcolor">finally</span> statement lets you execute code, after try and catch, regardless of the result.
+            </p>
+
+            <h2 style="text-align:center">Errors Will Happen!</h2>
+            <p>
+                When executing JavaScript code, different errors can occur.
+                <br>
+                Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things.
+            </p>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+
+                    &lt;script&gt;
+                    try {
+                      adddlert("Welcome guest!");
+                    }
+                    catch(err) {
+                      document.getElementById("demo").innerHTML = err.message;
+                    }
+                    &lt;/script&gt;
+                </pre>
+            </section>
+
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Error Handling&lt;/h2&gt;
+                    
+                    &lt;p&gt;This example demonstrates how to use &lt;b&gt;catch&lt;/b&gt; to diplay an error.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    try {
+                      adddlert("Welcome guest!");
+                    }
+                    catch(err) {
+                      document.getElementById("demo").innerHTML = err.message;
+                    }
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Error-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">JavaScript try and catch</h2>
+            <p>
+                The try statement allows you to define a block of code to be tested for errors while it is being executed.
+                <BR>
+                The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+                <br>
+                The JavaScript statements try and catch come in pairs:
+            </p>
+
+            <h4>Syntax :-</h4>
+            <section>
+                <pre>
+                    try {<br>
+                        Block of code to try<br>
+                      }<br>
+                      catch(err) {<br>
+                        Block of code to handle errors<br>
+                      }<br>
+                </pre>
+            </section>
+            <br>
+
+            <h2 style="text-align:center">JavaScript Throws Errors</h2>
+            <p>
+                When an error occurs, JavaScript will normally stop and generate an error message.
+                <br>
+                The technical term for this is: JavaScript will <b>throw an exception (throw an error)</b>.<br>
+                <mark>
+                        JavaScript will actually create an <b>Error object</b> with two properties: <b>name</b> and <b>message</b>.
+                </mark>
+            </p>
+            <br>
+
+
+            <h2 style="text-align:center">The throw Statement</h2>
+            <p>
+                The <span class="textcolor">throw</span> statement allows you to create a custom error.
+                <br>
+                Technically you can <b>throw an exception (throw an error)</b>.
+                <br>
+                The exception can be a JavaScript <span class="textcolor">String</span>, a <span class="textcolor">Number</span>, a <span class="textcolor">Boolean</span> or an <span class="textcolor">Object</span>:
+            </p>
+
+            <h4>Syntax :-</h4>
+            <section>
+                <pre>
+                    throw "Too big";    // throw a text<br>
+                    throw 500;          // throw a number
+                </pre>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Input Validation Example</h2>
+            <p>
+                This example examines input. If the value is wrong, an exception (err) is thrown.
+                <br>
+                The exception (err) is caught by the catch statement and a custom error message is displayed:
+            </p>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;body&gt;
+
+                        &lt;p&gt;Please input a number between 5 and 10:&lt;/p&gt;
+
+                        &lt;input id="demo" type="text"&gt;
+                        &lt;button type="button" onclick="myFunction()"&gt;Test Input&lt;/button&gt;
+                        &lt;p id="p01"&gt;&lt;/p&gt;
+
+                        &lt;script&gt;
+                        function myFunction() {
+                        var message, x;
+                        message = document.getElementById("p01");
+                        message.innerHTML = "";
+                        x = document.getElementById("demo").value;
+                        try { 
+                            if(x == "")  throw "empty";
+                            if(isNaN(x)) throw "not a number";
+                            x = Number(x);
+                            if(x &lt; 5)  throw "too low";
+                            if(x &gt; 10)   throw "too high";
+                        }
+                        catch(err) {
+                            message.innerHTML = "Input is " + err;
+                        }
+                        }
+                        &lt;/script&gt;
+
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+
+                    
+                </pre>
+                <a href="../Output/Error-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+            <h2 style="text-align:center">HTML Validation</h2>
+            <p>
+                Modern browsers will often use a combination of JavaScript and built-in HTML validation, using predefined validation rules defined in HTML attributes:
+            </p>
+
+            <section>
+                <pre>
+                    &lt;input id="demo" type="number" min="5" max="10" step="1"&gt;
+                </pre>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">The finally Statement</h2>
+            <p>
+                The <span class="textcolor">finally</span> statement lets you execute code, after try and catch, regardless of the result:
+            </p>
+            <h4>Syntax :-</h4>
+            <section>
+                <pre>
+                    try {<br>
+                        Block of code to try<br>
+                      }<br>
+                      catch(err) {<br>
+                        Block of code to handle errors<br>
+                      }<br>
+                      finally {<br>
+                        Block of code to be executed regardless of the try / catch result<br>
+                      }<br>
+                </pre>
+            </section>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    function myFunction() {
+                        var message, x;
+                        message = document.getElementById("p01");
+                        message.innerHTML = "";
+                        x = document.getElementById("demo").value;
+                        try {
+                          if(x == "") throw "is empty";
+                          if(isNaN(x)) throw "is not a number";
+                          x = Number(x);
+                          if(x &gt; 10) throw "is too high";
+                          if(x &lt; 5) throw "is too low";
+                        }
+                        catch(err) {
+                          message.innerHTML = "Error: " + err + ".";
+                        }
+                        finally {
+                          document.getElementById("demo").value = "";
+                        }
+                      }
+                </pre>
+                <a href="../Output/Error-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+        </div>
+    </body>
+</html>
+
+

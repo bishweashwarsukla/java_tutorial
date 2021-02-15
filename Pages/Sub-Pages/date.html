@@ -1,0 +1,878 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Dates</h1>
+        <div class="basic">
+            <p>
+                The Javascript <strong>Date Object</strong> lets us work with dates:<br>
+                <strong> Sat Feb 13 2021 19:59:12 GMT+0530(India Standard Time)</strong>
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var d=new Date();
+                </pre>
+            </section>
+            <p> Code: </p>
+            <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                <a href="../Output/Date-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+            <h3> JavaScript Date Output</h3>
+            <p>By default, JavaScript will use the browser's time zone and display a date as a full text string:<br>
+            <strong>Sat Feb 13 2021 19:59:12 GMT+0530(India Standard Time)</strong></p>
+            <h3> Creating Date Objects</h3>
+            <p>
+                Date objects are created with <strong>new Date()</strong> constructor.<br>
+                There are 4 ways to create a new date object:
+            </p>
+             <section>
+                <pre>
+                    new Date()
+                    new Date(year,month,day,hours,minutes,seconds,milliseconds)
+                    new Date(milliseconds)
+                    new Date(date string)
+                </pre>
+            </section>
+            <h3>new Date()</h3>
+            <p>new Date() creates a new date object with the current date and time:</p>
+            <h4>Example:-</h4>
+            <section>
+                <pre>
+                    var d=new Date();
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p&gt; creates a new date object with the current date and time &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                <a href="../Output/Date-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+            <p>
+                <mark>
+                    Date objects are static.The computer time is ticking,but date objects are not.
+                </mark>
+</p>
+            <h3> new Date(year,month,...)</h3>
+            <p>
+                new Date(year,month,...) creates a new date object with a specified date and time.<br>
+                7 numbers specify year,month,day,hour,minute,second,and millisecond(in that order):
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var d=new Date(2021,10,13,14,45,50,0);
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p&gt; creates a new date object with a specified date and time.&lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date(2021,10,13,14,45,50,0);
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+            <p>
+                <mark>
+                    JavaScript counts months from 0 to 11.<br>
+                    January is 0 and December is 11.
+                </mark>
+</p>
+            <h3> Previous Century</h3>
+            <p>
+                One and two digit years will be interpreted as 19xx:
+            </p>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    var d=new Date(99,11,24);
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p&gt; two digit years will be interpreted as 19xx: &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date(99,11,24);
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp4.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+              <h3> new Date(dateString()</h3>
+            <p>
+                new Date(dateString()) creates a new date object from a date string:
+            </p>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    var d=new Date("October 13,2014 11:13:00");
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p&gt; a date object can be created with a specified date and time: &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date("October 13,2014 11:13:00");
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp5.html" target="_blank">Run Example</a>
+            </section>
+<br>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    var d=new Date(100000000000);
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p&gt; 100000000000 milliseconds from Jan 1,1970,is approx Mar 3,1973: &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date(100000000000);
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp6.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+ <p>
+                <mark>
+                    One day (24 hours) is 86 400 000 milliseconds.
+                </mark>
+</p>
+            <h3>Date Methods</h3>
+            <p>When a object is created, a number of methods allow you to operate on it.<br>
+            Date methods allow you to get and set the year,month,day,hour,minute,second,and millisecond of date objects,using either local time or UTC(universal or GMT)time.</p>
+ <h3> Displaying Dates</h3>
+            <p>
+                JavaScript will(by default)output dates in full text string format:
+            </p>
+             <section>
+                <pre>
+                    Wed Mar 25 2015 05:30:00 GMT+0530(India Standard Time)
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp7.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+<p> When you display a date object in HTML,it is automatically converted to a string,with the <strong>toString</strong>method. </p>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    d=new Date();
+                    document.getElementById("demo").innerHTML=d.toString();
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript toString() &lt;/h2&gt;
+                    &lt;p&gt; The <strong>toString()</strong> method converts a date to a String. &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.toString();
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp11.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+<p> The <strong>toUTCString()</strong> method converts a date to UTC String(a date display standard).</p>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.toUTCString();
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript Date() &lt;/h2&gt;
+                    &lt;p&gt; The <strong>toUTCString()</strong> method converts a date to UTC String(a date display standard). &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.toUTCString();
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp8.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+<p> The <strong>toDateString()</strong> method converts a date to a more readable format.</p>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.toDateString();
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript toDateString() &lt;/h2&gt;
+                    &lt;p&gt; The <strong>toDateString()</strong> method converts a date to a more readable format. &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.toDateString();
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp12.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+<p> The <strong>toISOString()</strong> method converts a date to a string,using the ISO strandard format.</p>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.toISOString();
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript toISOString() &lt;/h2&gt;
+                    &lt;p&gt; The <strong>toISOString()</strong> method converts a date to a string,using the ISO strandard format. &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.toISOString();
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                    <a href="../Output/Date-Page-Examples/exp13.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+            <h3> JavaScript Date Input</h3>
+            <p>
+                There are generally 3 types of JavaScript date input formats: 
+            </p>
+<table>
+                <tr>
+                  <th>Type</th>
+                  <th>Example</th>
+                </tr>
+                <tr>
+                  <td>ISO Date</td>
+                  <td>"2015-03-25"(The International Standard)</td>
+                </tr>
+                <tr>
+                  <td>Short Date</td>
+                  <td>"03/25/2015"</td>
+                </tr>
+                <tr>
+                  <td>Long Date</td>
+                  <td>"Mar 25 2015" or "25 Mar 2015"</td>
+                </tr>
+                
+              </table>
+<h3>JavaScript ISO Dates</h3>
+<p>ISO 8601 is the international standard for the representation of dates and times.</p>
+            <h4>Example :-</h4>
+             <section>
+                <pre>
+                    var d=new Date("2015-03-25");
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript ISO Dates() &lt;/h2&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date("2015-03-25");
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp9.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+<h3>JavaScript ISO Dates(Year and Month)</h3>
+<p>ISO dates can be written without specifying day(YYYY-MM):</p>
+ <h4>Example :-</h4>
+<section>
+                <pre>
+                   var d=new Date("2015-03");
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript ISO Dates() &lt;/h2&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date("2015-03");
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp10.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+<p><mark>
+Time Zones will vary the result above between Feb 28 and Mar 01.</mark>
+</p>
+<h3>JavaScript ISO Dates(Only Year)</h3>
+<p>ISO dates can be written without month and day(YYYY):</p>
+ <h4>Example :-</h4>
+                <section>
+                <pre>
+                   var d=new Date("2015");
+                </pre>
+                </section>
+                <p> Code: </p>
+                <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript ISO Dates() &lt;/h2&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date("2015");
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                <a href="../Output/Date-Page-Examples/exp14.html" target="_blank">Run Example</a>
+              </section>
+              <br>
+<p><mark>
+Time Zones will vary between Dec 31 2014 and Jan 01 2015.</mark>
+</p>
+<h3>JavaScript ISO Dates(Date and Time)</h3>
+<p>ISO dates can be written with added hours,minutes,and seconds(YYYY-MM-DDTHH:MM:SSZ):</p>
+ <h4>Example :-</h4>
+<section>
+                <pre>
+                   var d=new Date("2015-03-25T12:00:00Z");
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript ISO Dates() &lt;/h2&gt;
+                    &lt;p&gt; Separate date and time with a capital T.&lt;/p&gt;
+                    &lt;p&gt;Indicate UTC time with a capital Z. &lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                   var d=new Date("2015-03-25T12:00:00Z");
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+                <a href="../Output/Date-Page-Examples/exp15.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+<p><mark>
+Omitting T and Z can give different results in different browsers.</mark>
+</p>
+<h3>Time Zones</h3>
+<p>When setting a date,without specifying time zone,JavaScript will use the browser's time zone.<br>
+When getting a date,without specifying the time zone,the result is converted to the browser's time zone.<br>
+In other words:If a date/time is created in GMT (Greenwich Mean Time),the date/time will be converted to CDT(Central US Daylight Time)if a user browses from central US.</p>
+<h3> JavaScript Short Dates()</h3>
+            <p>
+               Short dates are written with an "MM/DD/YYYY" syntax like this:
+            </p>
+            <h4>Example :-</h4>
+                   <section>
+                   <pre>
+                   var d=new Date("03/25/2015");
+                   </pre>
+                   </section>
+                   <p> Code: </p>
+                   <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript new Date() &lt;/h2&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date("2015-03-25T12:00:00Z");
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp16.html" target="_blank">Run Example</a>               
+</section>
+            <br>
+<h3>Date Input-Parsing Dates</h3>
+<p>If yoiu have avalid date string,you can use the<br>
+<strong>Date.parse()</strong> method to convert it to milliseconds.<br>
+<strong>Date.parse()</strong> returns the number of milliseconds between the date and Jan 1,1970.
+</p>
+ <h4>Example :-</h4>
+             <section>
+                <pre>
+                   var msec=Date.parse("March 21 2012");
+                   document.getElementById("demo").innerHTML=msec;
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript Date.parse() &lt;/h2&gt;
+                    &lt;p &gt; Date.parse()</strong> returns the number of milliseconds between the date and Jan 1,1970.&lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var msec=Date.parse("March 21 2012");
+                    document.getElementById("demo").innerHTML=msec;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp17.html" target="_blank">Run Example</a>
+</section>
+            <br>
+<h3>JavaScript Get Date Methods</h3>
+<p>These dates can be used for getting information from a date object.</p>
+<table>
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>getFullYear()</td>
+                  <td>Get the year as a 4 digit number(yyyy)</td>
+                </tr>
+                <tr>
+                  <td>getMonth()</td>
+                  <td>Get the month as a number(0-11)</td>
+                </tr>
+                <tr>
+                  <td>getDate()</td>
+                  <td>Get the day as a number(1-31)</td>
+                </tr>
+                <tr>
+                  <td>getHours()</td>
+                  <td>Get the hour (0-23)</td>
+                </tr>
+                <tr>
+                  <td>getMinutes()</td>
+                  <td>Get the minute (0-59)</td>
+                </tr>
+                <tr>
+                  <td>getSeconds()</td>
+                  <td>Get the second (0-59)</td>
+                </tr>
+                <tr>
+                  <td>getMilliseconds()</td>
+                  <td>Get the second (0-999)</td>
+                </tr>
+                <tr>
+                  <td>getTime()</td>
+                  <td>Get the time (milliseconds since Jan 1,1970)</td>
+                </tr>
+                <tr>
+                  <td>getDay()</td>
+                  <td>Get the weekday (0-6)</td>
+                </tr>
+                <tr>
+                  <td>Date.now()</td>
+                  <td>Get the time ECMAScript 5.</td>
+                </tr>
+              </table>
+            <h3>The getTime() Method</h3>
+<p>The <strong>getTime()</strong> method returns the number of milliseconds since Jan 1,1970:</p>
+ <h4>Example :-</h4>
+             <section>
+                <pre>
+                   var d=new Date();
+                   document.getElementById("demo").innerHTML=d.getTime();
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript getTime() &lt;/h2&gt;
+                    &lt;p &gt; The internal clock in JavaScript counts from midnight Jan 1,1970.&lt;/p&gt;
+                    &lt;p &gt; The <strong>getTime()</strong> method returns the number of milliseconds since Jan 1,1970:&lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.getTime();
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp18.html" target="_blank">Run Example</a>
+</section>
+            <br>          
+<h3>The getFullYear() Method</h3>
+<p>The <strong>getFullYear()</strong> method returns the year of a date as a four digit number:</p>
+ <h4>Example :-</h4>
+             <section>
+                <pre>
+                   var d=new Date();
+                   document.getElementById("demo").innerHTML=d.getFullYear();
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript getFullYear() &lt;/h2&gt;
+                    &lt;p &gt;The <strong>getFullYear()</strong> method returns the year of a date as a four digit number:&lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    document.getElementById("demo").innerHTML=d.getFullYear();
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp19.html" target="_blank">Run Example</a>
+</section>
+            <br>         
+<p>
+<mark>
+In JavaScript,the first day if the week (0) means "Sunday",even if some countries in the world consider the first dayof the week to be "Monday".
+</mark></p>
+         <h4>Example :-</h4>
+             <section>
+                <pre>
+                   var d=new Date();
+                   var days=["Sunday", "Monday", "Tuesday", "Wednesday", "thursday", "Friday". "Saturday"];
+                   document.getElementById("demo").innerHTML=days[d.getDay()];
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript getDay() &lt;/h2&gt;
+                    &lt;p &gt;The <strong>getDay()</strong> method returns the weekday as a number:&lt;/p&gt;
+                    &lt;p &gt;You can use an array to display the name of the day.&lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    var days=["Sunday", "Monday", "Tuesday", "Wednesday", "thursday", "Friday". "Saturday"];
+                    document.getElementById("demo").innerHTML=days[d.getDay()];
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp20.html" target="_blank">Run Example</a>
+</section>
+            <br>   
+<h3>UTC Date Methods</h3>
+<p>UTC dates acn be used for working with UTC dates(Universal Time Zone dates).</p>
+<table>
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>getUTCFullYear()</td>
+                  <td>Get the year as a 4 digit number(yyyy) but returns UTC year</td>
+                </tr>
+                <tr>
+                  <td>getUTCMonth()</td>
+                  <td>Get the month as a number(0-11) but returns UTC month</td>
+                </tr>
+                <tr>
+                  <td>getUTCDate()</td>
+                  <td>Get the day as a number(1-31) but returns UTC date</td>
+                </tr>
+                <tr>
+                  <td>geUTCtHours()</td>
+                  <td>Get the hour (0-23) but returns UTC hours</td>
+                </tr>
+                <tr>
+                  <td>getUTCMinutes()</td>
+                  <td>Get the minute (0-59) but returns UTC minutes</td>
+                </tr>
+                <tr>
+                  <td>getUTCSeconds()</td>
+                  <td>Get the second (0-59) but returns UTC seconds</td>
+                </tr>
+                <tr>
+                  <td>getUTCMilliseconds()</td>
+                  <td>Get the second (0-999) but returns UTC millimseconds</td>
+                </tr>
+                <tr>
+                  <td>getUTCDay()</td>
+                  <td>Get the weekday (0-6) but returns UTC day</td>
+                </tr>
+              </table>  
+<h3>JavaScript Set Date Methods</h3>
+<p>Set Date methods let you set date values(years,months,days,hours,minutes,seconds,milliseconds) for a date object.</p>
+<table>
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>setFullYear()</td>
+                  <td>Set the year(optionally month and day)</td>
+                </tr>
+                <tr>
+                  <td>setMonth()</td>
+                  <td>Set the month(0-11)</td>
+                </tr>
+                <tr>
+                  <td>setDate()</td>
+                  <td>Set the day as a number(1-31)</td>
+                </tr>
+                <tr>
+                  <td>setHours()</td>
+                  <td>Set the hour (0-23)</td>
+                </tr>
+                <tr>
+                  <td>setMinutes()</td>
+                  <td>Set the minute (0-59)</td>
+                </tr>
+                <tr>
+                  <td>setSeconds()</td>
+                  <td>Set the second (0-59)</td>
+                </tr>
+                <tr>
+                  <td>setMilliseconds()</td>
+                  <td>Set the second (0-999)</td>
+                </tr>
+                <tr>
+                  <td>setTime()</td>
+                  <td>Set the time (milliseconds since Jan 1,1970)</td>
+                </tr>
+              </table>
+            <h3>The setDate() Method</h3>
+<p>The <strong>setDate()</strong> method can also be used to add days to a date:</p>
+ <h4>Example :-</h4>
+             <section>
+                <pre>
+                   &lt;script&gt;
+                   var d=new Date();
+                   d.setDate(d.getDate()+50);
+                   document.getElementById("demo").innerHTML=d;
+                   &lt;/script&gt;
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript setDate() &lt;/h2&gt;
+                    &lt;p &gt; The <strong>setDate()</strong> method can be used to add days to a date:&lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    d.setDate(d.getDate()+50);
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp22.html" target="_blank">Run Example</a>
+</section>
+            <br>          
+<h3>The setFullYear() Method</h3>
+<p>The <strong>setFullYear()</strong> method sets the year of a date object:</p>
+ <h4>Example :-</h4>
+             <section>
+                <pre>
+                   &lt;script&gt;
+                   var d=new Date();
+                   d.setFullYear(2020);
+                   document.getElementById("demo").innerHTML=d;
+                   &lt;/script&gt;
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt; Javascript setFullYear() &lt;/h2&gt;
+                    &lt;p &gt;The <strong>setFullYear()</strong> method sets the year of a date object:&lt;/p&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var d=new Date();
+                    d.setFullYear(2020);
+                    document.getElementById("demo").innerHTML=d;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp21.html" target="_blank">Run Example</a>
+</section>
+            <br> 
+<h3>Compare Dates</h3>        
+<p>Dates can easily be compared.<br>
+The following example compares today's date with Jan 14,2100:
+</p>
+         <h4>Example :-</h4>
+             <section>
+                <pre>
+                   var today,someday,text;
+                   today=new Date();
+                   someday=new Date();
+                   someday.setFullYear(2100,0,14);
+                   if(someday>today){
+                   text="Today is before Jan 14,2100.";
+                   }
+                   else{
+                   text="Today is after Jan 14,2100.";
+                   }
+                   document.getElementById("demo").innerHTML=text;
+                </pre>
+            </section>
+            <p> Code: </p>
+             <section>
+                    <pre>
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;p id="demo"&gt; &lt;/p&gt;
+                    &lt;script&gt;
+                    var today,someday,text;
+                    today=new Date();
+                    someday=new Date();
+                    someday.setFullYear(2100,0,14);
+                    if(someday>today){
+                    text="Today is before Jan 14,2100.";
+                    }
+                    else{
+                    text="Today is after Jan 14,2100.";
+                    }
+                    document.getElementById("demo").innerHTML=text;
+                    &lt;/script&gt;                
+                    &lt;/body&gt;	
+                    &lt;/html&gt;
+                    </pre>
+<a href="../Output/Date-Page-Examples/exp23.html" target="_blank">Run Example</a>
+</section>
+      
+</body>
+</html>

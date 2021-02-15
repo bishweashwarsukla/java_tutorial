@@ -1,0 +1,273 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript String</h1>
+        <div class="basic">
+            <p>
+                JavaScript has only one type of number. Numbers can be written with or without decimals.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 3.14;    // A number with decimals<br>
+                    var y = 3;       // A number without decimals<br>
+                </pre>
+                <a href="../Output/String-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                You can use single or double quotes:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var carName1 = "Volvo XC60";  // Double quotes<br>
+                    var carName2 = 'Volvo XC60';  // Single quotes<br>
+                </pre>
+                <a href="../Output/String-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var answer1 = "It's alright";<br>
+                    var answer2 = "He is called 'Johnny'";<br>
+                    var answer3 = 'He is called "Johnny"';<br>
+                </pre>
+                <a href="../Output/String-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">String Length</h2>
+            <p>
+                To find the length of a string, use the built-in <span class="textcolor">length</span> property:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+                    var sln = txt.length;<br>
+                </pre>
+                <a href="../Output/String-Page-Examples/exp4.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Escape Character</h2>
+            <p>
+                Because strings must be written within quotes, JavaScript will misunderstand this string:
+            </p>
+            <section>
+                <pre>
+                    var x = "We are the so-called "Vikings" from the north.";
+                </pre>
+            </section>
+            <p>
+                The string will be chopped to "We are the so-called ".<br>
+                The solution to avoid this problem, is to use the backslash escape character.<br>
+                The backslash (\) escape character turns special characters into string characters:<br>
+                The sequence \"  inserts a double quote in a string:
+            </p>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "We are the so-called \"Vikings\" from the north.";
+                </pre>
+                <a href="../Output/String-Page-Examples/exp5.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+            <table>
+                <tr>
+                  <th>Code</th>
+                  <th>Result</th>
+                </tr>
+                <tr>
+                  <td>\b</td>
+                  <td>Backspace</td>
+                </tr>
+                <tr>
+                  <td>\f</td>
+                  <td>Form Feed</td>
+                </tr>
+                <tr>
+                  <td>\n</td>
+                  <td>New Linel</td>
+                </tr>
+                <tr>
+                  <td>\r</td>
+                  <td>Carriage Return</td>
+                </tr>
+                <tr>
+                  <td>\t</td>
+                  <td>Horizontal Tabulator</td>
+                </tr>
+                <tr>
+                  <td>\v</td>
+                  <td>Vertical Tabulator</td>
+                </tr>
+              </table>
+              <p>
+                  <mark>
+                    The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. 
+                    They do not make any sense in HTML.
+                  </mark>
+              </p>
+              <br>
+
+
+            <h2 style="text-align:center">Breaking Long Code Lines</h2>
+            <p>
+                For best readability, programmers often like to avoid code lines longer than 80 characters.<br>
+                If a JavaScript statement does not fit on one line, the best place to break it is after an operator:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    document.getElementById("demo").innerHTML=<br>
+                    "Hello Dolly!";
+                </pre>
+                <a href="../Output/String-Page-Examples/exp6.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                You can also break up a code line within a text string with a single backslash:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    document.getElementById("demo").innerHTML = "Hello \<br>
+                    Dolly!";
+                </pre>
+                <a href="../Output/String-Page-Examples/exp7.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                <mark>
+                    The \ method is not the preferred method. It might not have universal support.<br>
+                    Some browsers do not allow spaces behind the \ character.
+                </mark>
+            </p>
+
+            <p>
+                A safer way to break up a string, is to use string addition:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    document.getElementById("demo").innerHTML = "Hello " +
+                    "Dolly!";
+                </pre>
+                <a href="../Output/String-Page-Examples/exp8.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                You cannot break up a code line with a backslash:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    document.getElementById("demo").innerHTML = \<br>
+                    "Hello Dolly!";
+                </pre>
+                <a href="../Output/String-Page-Examples/exp9.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Strings Can be Objects</h2>
+            <p>
+                Normally, JavaScript strings are primitive values, created from literals:<br>
+                <span class="textcolor">var firstName = "John";</span><br>
+                But strings can also be defined as objects with the keyword <span class="textcolor">new</span>:<br>
+                <span class="textcolor">var firstName = new String("John");</span>
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "John";<br>
+                    var y = new String("John");<br>
+                    <br>
+                    // typeof x will return string<br>
+                    // typeof y will return object<br>
+                </pre>
+                <a href="../Output/String-Page-Examples/exp10.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                <mark>
+                    Don't create strings as objects. It slows down execution speed.<br>
+                    The new keyword complicates the code. This can produce some unexpected results:
+                </mark>
+            </p>
+            <br>
+
+
+
+            <p>
+                When using the == operator, equal strings are equal:
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "John";<br>        
+                    var y = new String("John");<br>
+                    <br>
+                    // (x == y) is true because x and y have equal values<br>
+                </pre>
+                <a href="../Output/String-Page-Examples/exp11.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                When using the === operator, equal strings are not equal, because the === operator expects equality in both type and value.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "John";     <br>        
+                    var y = new String("John");<br>
+                    
+                    // (x === y) is false because x and y have different types (string and object)<br>
+                </pre>
+                <a href="../Output/String-Page-Examples/exp12.html" target="_blank">Run Example</a>
+            </section>
+
+
+            <p>
+                Or even worse. Objects cannot be compared:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = new String("John");       <br>      
+                    var y = new String("John");<br>
+                    
+                    // (x == y) is false because x and y are different objects
+                </pre>
+                <a href="../Output/String-Page-Examples/exp13.html" target="_blank">Run Example</a>
+            </section>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = new String("John");    <br>         
+                    var y = new String("John");<br>
+                    
+                    // (x === y) is false because x and y are different objects
+                </pre>
+                <a href="../Output/String-Page-Examples/exp14.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                <mark>
+                    Note the difference between (x==y) and (x===y).<br>
+                    Comparing two JavaScript objects will always return false.
+                </mark>
+            </p>
+            <br>
+
+
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,335 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Regular Expressions</h1>
+        <div class="basic">
+            <p>
+                A regular expression is a sequence of characters that forms a <span class="textcolor">search pattern</span>.
+                <br>
+                When you search for data in a text, you can use this search pattern to describe what you are searching for.
+                <br>
+                A regular expression can be a single character, or a more complicated pattern.
+                <br>
+                Regular expressions can be used to perform all types of <span class="textcolor">text search</span> and <span class="textcolor">text replace</span> operations.
+            </p>
+            <h4>Syntax</h4>
+            <section>
+                <pre>
+                    /pattern/modifiers;
+                </pre>
+            </section>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var patt = /w3schools/i;
+                </pre>
+            </section>
+            <p>
+                <h4>Example explained:</h4>
+                <br>
+                /w3schools/i  is a regular expression.
+                <br>
+                w3schools  is a pattern (to be used in a search).
+                <br>
+                i  is a modifier (modifies the search to be case-insensitive).
+            </p>
+
+
+            <h2 style="text-align:center">Using String Methods</h2>
+            <p>
+                In JavaScript, regular expressions are often used with the two string methods: <span class="textcolor">search()</span> and <span class="textcolor">replace()</span>.
+                <br>
+                The <span class="textcolor">search()</span> method uses an expression to search for a match, and returns the position of the match.
+                <br>
+                The <span class="textcolor">replace()</span> method returns a modified string where the pattern is replaced.
+            </p>
+
+            <h2 style="text-align:center">Using String search() With a String</h2>
+            <p>
+                The <span class="textcolor">search()</span> method searches a string for a specified value and returns the position of the match:
+            </p>
+
+            <h4>Example :-</h4>
+            <p>
+                Use a string to do a search for "W3schools" in a string:
+            </p>
+            <section>
+                <pre>
+                    var str = "Visit W3Schools!";<br>
+                    var n = str.search("W3Schools");
+                </pre>
+            </section>
+            <p>
+                Code:
+            </p>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                        &lt;body&gt;
+                        
+                        &lt;h2&gt;JavaScript String Methods&lt;/h2&gt;
+                        
+                        &lt;p&gt;Search a string for "W3Schools", and display the position of the match:&lt;/p&gt;
+                        
+                        &lt;p id="demo"&gt;&lt;/p&gt;
+                        
+                        &lt;script&gt;
+                        var str = "Visit W3Schools!"; 
+                        var n = str.search("W3Schools");
+                        document.getElementById("demo").innerHTML = n;
+                        &lt;/script&gt;
+                        
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/RegularExp-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Using String search() With a Regular Expression</h2>
+            <p>
+                Use a regular expression to do a case-insensitive search for "w3schools" in a string
+            </p>
+            <h4>Example :-</h4>
+            <p>
+                Use a string to do a search for "W3schools" in a string:
+            </p>
+            <section>
+                <pre>
+                    var str = "Visit W3Schools";
+                    var n = str.search(/w3schools/i);
+                </pre>
+            </section>
+            <p>
+                Code:
+            </p>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                        &lt;body&gt;
+                        
+                        &lt;h2&gt;JavaScript Regular Expressions&lt;/h2&gt;
+                        
+                        &lt;p&gt;Search a string for "w3Schools", and display the position of the match:&lt;/p&gt;
+                        
+                        &lt;p id="demo"&gt;&lt;/p&gt;
+                        
+                        &lt;script&gt;
+                        var str = "Visit W3Schools!"; 
+                        var n = str.search(/w3Schools/i);
+                        document.getElementById("demo").innerHTML = n;
+                        &lt;/script&gt;
+                        
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/RegularExp-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Using String replace() With a String</h2>
+            <p>
+                The <span class="textcolor">replace()</span> method replaces a specified value with another value in a string:
+            </p>
+            <section>
+                <pre>
+                    var str = "Visit W3Schools";
+                    var n = str.search(/w3schools/i);
+                </pre>
+            </section>
+
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                        
+                        &lt;body&gt;
+                        
+                        &lt;h2&gt;JavaScript String Methods&lt;/h2&gt;
+                        
+                        &lt;p&gt;Replace "Microsoft" with "W3Schools" in the paragraph below:&lt;/p&gt;
+                        
+                        &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
+                        
+                        &lt;p id="demo"&gt;Please visit Microsoft!&lt;/p&gt;
+                        
+                        &lt;script&gt;
+                        function myFunction() {
+                        var str = document.getElementById("demo").innerHTML; 
+                        var txt = str.replace("Microsoft","W3Schools");
+                        document.getElementById("demo").innerHTML = txt;
+                        }
+                        &lt;/script&gt;
+                        
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/RegularExp-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Use String replace() With a Regular Expression</h2>
+            <p>
+                Use a case insensitive regular expression to replace Microsoft with W3Schools in a string:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var str = "Visit Microsoft!";<br>
+                    var res = str.replace(/microsoft/i, "W3Schools");
+                </pre>
+            </section>
+
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;body&gt;
+
+                            &lt;h2&gt;JavaScript Regular Expressions&lt;/h2&gt;
+
+                            &lt;p&gt;Replace "microsoft" with "W3Schools" in the paragraph below:&lt;/p&gt;
+
+                            &lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
+
+                            &lt;p id="demo"&gt;Please visit Microsoft and Microsoft!&lt;/p&gt;
+
+                            &lt;script&gt;
+                            function myFunction() {
+                            var str = document.getElementById("demo").innerHTML; 
+                            var txt = str.replace(/microsoft/i,"W3Schools");
+                            document.getElementById("demo").innerHTML = txt;
+                            }
+                            &lt;/script&gt;
+
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                </pre>
+                <a href="../Output/RegularExp-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Did you notice ?</h2>
+            <p>
+                <mark>
+                    Regular expression arguments (instead of string arguments) can be used in the methods above.
+                    <br>Regular expressions can make your search much more powerful (case insensitive for example).
+                </mark>
+            </p>
+            <br>
+
+            <h2 style="text-align:center">Using the RegExp Object</h2>
+            <p>
+                In JavaScript, the RegExp object is a regular expression object with predefined properties and methods.
+            </p>
+            <h2 style="text-align:center">Using test()</h2>
+            <p>
+                The <Span class-"textcolor">test()</Span> method is a RegExp expression method.
+                <br>
+                It searches a string for a pattern, and returns true or false, depending on the result.
+                <br>
+                The following example searches a string for the character "e":
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var patt = /e/;
+                    patt.test("The best things in life are free!");
+                </pre>
+            </section>
+
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;body&gt;
+
+                            &lt;h2&gt;JavaScript Regular Expressions&lt;/h2&gt;
+
+                            &lt;p&gt;Search for an "e" in the next paragraph:&lt;/p&gt;
+
+                            &lt;p id="p01"&gt;The best things in life are free!&lt;/p&gt;
+
+                            &lt;p id="demo"&gt;&lt;/p&gt;
+
+                            &lt;script&gt;
+                            text = document.getElementById("p01").innerHTML; 
+                            document.getElementById("demo").innerHTML = /e/.test(text);
+                            &lt;/script&gt;
+
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                </pre>
+                <a href="../Output/RegularExp-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+            <p>
+                You don't have to put the regular expression in a variable first. The two lines above can be shortened to one:
+            </p>
+            <section>
+                <pre>
+                    /e/.test("The best things in life are free!");
+                </pre>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Using exec()</h2>
+            <p>
+                The <Span class-"textcolor">exec()</Span> method is a RegExp expression method.
+                <br>
+                It searches a string for a specified pattern, and returns the found text as an object.
+                <br>
+                If no match is found, it returns an empty (null) object.
+                <br>
+                The following example searches a string for the character "e":
+            </p>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    /e/.exec("The best things in life are free!");
+                </pre>
+            </section>
+
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;body&gt;
+
+                            &lt;h2&gt;JavaScript Regular Expressions&lt;/h2&gt;
+
+                            &lt;p id="demo"&gt;&lt;/p&gt;
+
+                            &lt;script&gt;
+                            var obj = /e/.exec("The best things in life are free!");
+                            document.getElementById("demo").innerHTML =
+                            "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+                            &lt;/script&gt;
+
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+
+                </pre>
+                <a href="../Output/RegularExp-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+        </div>
+    </body>
+</html>

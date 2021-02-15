@@ -1,0 +1,963 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Numbers</h1>
+        <div class="basic">
+            <p>
+                JavaScript has only one type of number. Numbers can be written with or without decimals.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 3.14;    // A number with decimals<br>
+                    var y = 3;       // A number without decimals<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Numbers can be written with or without decimals:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 3.14;
+                    var y = 3;
+                    document.getElementById("demo").innerHTML = x + "&lt;br&gt;" + y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+            <p>
+                Extra large or extra small numbers can be written with scientific (exponent) notation:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 123e5;    // 12300000<br>
+                    var y = 123e-5;   // 0.00123<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Extra large or extra small numbers can be written with scientific (exponent) notation:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 123e5;
+                    var y = 123e-5;
+                    document.getElementById("demo").innerHTML = x + "&lt;br&gt;" + y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+            
+
+            <h2 style="text-align:center">JavaScript Numbers are Always 64-bit Floating Point</h2>
+            <p>
+                Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.<br>
+                JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.<br>
+                This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63:<br>
+
+            </p>
+
+            <h2 style="text-align:center">Precision</h2>
+            <p>
+                Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 999999999999999;   // x will be 999999999999999<br>
+                    var y = 9999999999999999;  // y will be 10000000000000000<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Integers (numbers without a period or exponent notation) are accurate up to 15 digits:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 999999999999999;
+                    var y = 9999999999999999;
+                    document.getElementById("demo").innerHTML = x + "&lt;br&gt;" + y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 0.2 + 0.1;         // x will be 0.30000000000000004
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Floating point arithmetic is not always 100% accurate.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 0.2 + 0.1;
+                    document.getElementById("demo").innerHTML = "0.2 + 0.1 = " + x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp4.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                To solve the problem above, it helps to multiply and divide:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = (0.2 * 10 + 0.1 * 10) / 10;       // x will be 0.3
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    <!DOCTYPE html>
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Floating point arithmetic is not always 100% accurate:&lt;/p&gt;
+                    &lt;p id="demo1"&gt;&lt;/p&gt;
+                    
+                    &lt;p&gt;But it helps to multiply and divide:&lt;/p&gt;
+                    
+                    &lt;p id="demo2"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 0.2 + 0.1;
+                    document.getElementById("demo1").innerHTML = "0.2 + 0.1 = " + x;
+                    var y = (0.2*10 + 0.1*10) / 10;
+                    document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp5.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Adding Numbers and Strings</h2>
+            <p style="background-color: rgb(241, 99, 99);">
+                WARNING !!!<br>
+                JavaScript uses the + operator for both addition and concatenation.<br>
+                Numbers are added. Strings are concatenated.<br>
+            </p>
+            <p>
+                If you add two numbers, the result will be a number:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 10;<br>
+                    var y = 20;<br>
+                    var z = x + y;           // z will be 30 (a number)<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;If you add two numbers, the result will be a number:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 10;
+                    var y = 20;
+                    var z = x + y;
+                    document.getElementById("demo").innerHTML = z;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp6.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                If you add two strings, the result will be a string concatenation:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "10";<br>
+                    var y = "20";<br>
+                    var z = x + y;           // z will be 1020 (a string)<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;If you add two numeric strings, the result will be a concatenated string:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "10";
+                    var y = "20";
+                    var z = x + y;
+                    document.getElementById("demo").innerHTML = z;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp7.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                If you add a number and a string, the result will be a string concatenation:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 10;<br>
+                    var y = "20";<br>
+                    var z = x + y;           // z will be 1020 (a string)<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;html&gt;
+                        &lt;body&gt;
+                        
+                        &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                        
+                        &lt;p&gt;If you add a number and a numeric string, the result will be a concatenated string:&lt;/p&gt;
+                        
+                        &lt;p id="demo"&gt;&lt;/p&gt;
+                        
+                        &lt;script&gt;
+                        var x = 10;
+                        var y = "20";
+                        var z = x + y;
+                        document.getElementById("demo").innerHTML = z;
+                        &lt;/script&gt;
+                        
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp8.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                If you add a string and a number, the result will be a string concatenation:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "10";<br>
+                    var y = 20;<br>
+                    var z = x + y;           // z will be 1020 (a string)
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;If you add a numeric string and a number, the result will be a concatenated string:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "10";
+                    var y = 20;
+                    document.getElementById("demo").innerHTML =
+                    "The result is: " + x + y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp9.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                A common mistake is to expect this result to be 30:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 10;<br>
+                    var y = 20;<br>
+                    var z = "The result is: " + x + y;<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;A common mistake is to expect this result to be 30:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 10;
+                    var y = 20;
+                    document.getElementById("demo").innerHTML =
+                    "The result is: " + x + y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp10.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                A common mistake is to expect this result to be 102030:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 10;<br>
+                    var y = 20;<br>
+                    var z = "30";<br>
+                    var result = x + y + z;<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;A common mistake is to expect this result to be 102030:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 10;
+                    var y = 20;
+                    var z = "30";
+                    var result = x + y + z;
+                    document.getElementById("demo").innerHTML = result;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp11.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                <mark>
+                    The JavaScript interpreter works from left to right.<br>
+                    First 10 + 20 is added because x and y are both numbers.<br>
+                    Then 30 + "30" is concatenated because z is a string.<br>
+                </mark>
+            </p>
+            <br>
+
+
+            <h2 style="text-align:center">Numeric Strings</h2>
+            <p>
+                JavaScript strings can have numeric content:
+            </p>
+            <section>
+                <pre>
+                    var x = 100;         // x is a number<br>
+                    var y = "100";       // y is a string<br>
+                </pre>
+            </section>
+            <p>
+                JavaScript will try to convert strings to numbers in all numeric operations:<br>
+                This will work:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "100";<br>
+                    var y = "10";<br>
+                    var z = x / y;       // z will be 10<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;JavaScript will try to convert strings to numbers when dividing:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "100";
+                    var y = "10";
+                    var z = x / y;   
+                    document.getElementById("demo").innerHTML = z;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp12.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                This will also work:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "100";<br>
+                    var y = "10";<br>
+                    var z = x * y;       // z will be 1000
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;JavaScript will try to convert strings to numbers when multiplying:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "100";
+                    var y = "10";
+                    var z = x * y;   
+                    document.getElementById("demo").innerHTML = z;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp13.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                This will also work:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "100";<br>
+                    var y = "10";<br>
+                    var z = x - y;       // z will be 90
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;JavaScript will try to convert strings to numbers when subtracting:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "100";
+                    var y = "10";
+                    var z = x - y;   
+                    document.getElementById("demo").innerHTML = z;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp14.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+               But, This will not work:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "100";
+                    var y = "10";
+                    var z = x + y;       // z will not be 110 (It will be 10010)
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;JavaScript will NOT convert strings to numbers when adding:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "100";
+                    var y = "10";
+                    var z = x + y;   
+                    document.getElementById("demo").innerHTML = z;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp15.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                <mark>
+                    In the last example JavaScript uses the + operator to concatenate the strings.
+                </mark>
+            </p>
+            <br>
+
+
+            <h2 style="text-align:center">NaN - Not a Number</h2>
+            <p>
+                <span class="textcolor">NaN</span> is a JavaScript reserved word indicating that a number is not a legal number.
+                Trying to do arithmetic with a non-numeric string will result in <span class="textcolor">NaN</span> (Not a Number):
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 100 / "Apple";  // x will be NaN (Not a Number)
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;A number divided by a non-numeric string becomes NaN (Not a Number):&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    document.getElementById("demo").innerHTML = 100 / "Apple";
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp16.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                You can use the global JavaScript function <span class="textcolor">isNaN()</span>  to find out if a value is a number:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 100 / "Apple";<br>
+                    isNaN(x);               // returns true because x is Not a Number
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;You can use the global JavaScript function isNaN() to find out if a value is a number:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 100 / "Apple";
+                    document.getElementById("demo").innerHTML = isNaN(x);
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp17.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                Watch out for <span class="textcolor">NaN</span>. If you use <span class="textcolor">NaN</span> in a mathematical operation, the result will also be <span class="textcolor">NaN</span>:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = NaN;<br>
+                    var y = 5;<br>
+                    var z = x + y;         // z will be NaN
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;If you use NaN in a mathematical operation, the result will also be NaN:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = NaN;
+                    var y = 5;
+                    document.getElementById("demo").innerHTML = x + y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp24.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Infinity</h2>
+            <p>
+                <span class="textcolor">Infinity</span> (or -<span class="textcolor">Infinity</span>) is the value JavaScript will return if you calculate a number outside the largest possible number.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var myNumber = 2;<br>
+                    while (myNumber != Infinity) <br>
+                    {<br>
+                       // Execute until Infinity<br>
+                        myNumber = myNumber * myNumber;<br>
+                    }<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Infinity is returned if you calculate a number outside the largest possible number:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var myNumber = 2; 
+                    var txt = "";
+                    while (myNumber != Infinity) {
+                       myNumber = myNumber * myNumber;
+                       txt = txt + myNumber + "&lt;br&gt;";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp18.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                <span class="textcolor">Infinity</span> is a number: <span class="textcolor">typeof Infinity</span> returns <span class="textcolor">number</span>.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    typeof Infinity;     // returns "number"<br>
+                    }<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Infinity is a number:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = Infinity;
+                    document.getElementById("demo").innerHTML = typeof x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp19.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Hexadecimal</h2>
+            <p>
+                JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 0xFF;        // x will be 255
+                    }<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Numeric constants, preceded by 0x, are interpreted as hexadecimal:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 0xFF;
+                    document.getElementById("demo").innerHTML = "0xFF = " + x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp20.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+               <mark>
+                    Never write a number with a leading zero (like 07).<br>
+                    Some JavaScript versions interpret numbers as octal if they are written with a leading zero.<br>
+                </mark> 
+                By default, JavaScript displays numbers as base 10 decimals.<br>
+                But you can use the toString() method to output numbers from base 2 to base 36.<br>
+                Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.<br>
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var myNumber = 32;<br>
+                    myNumber.toString(10);  // returns 32<br>
+                    myNumber.toString(32);  // returns 10<br>
+                    myNumber.toString(16);  // returns 20<br>
+                    myNumber.toString(8);   // returns 40<br>
+                    myNumber.toString(2);   // returns 100000<br>
+                    }<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;The toString() method can output numbers from base 2 to 36:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var myNumber = 32;
+                    document.getElementById("demo").innerHTML =
+                    "32 = " + "&lt;br&gt;" + 
+                    " Decimal " + myNumber.toString(10) + "&lt;br&gt;" +
+                    " Hexadecimal " + myNumber.toString(16) + "&lt;br&gt;" +
+                    " Octal " + myNumber.toString(8) + "&lt;br&gt;" +
+                    " Binary " + myNumber.toString(2);
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp21.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Numbers Can be Objects</h2>
+            <p>
+                Normally JavaScript numbers are primitive values created from literals:<br>
+                <span class="textcolor">var x = 123;</span><br>
+                But numbers can also be defined as objects with the keyword <span class="textcolor">new</span>:<br>
+                <span class="textcolor">var y = new Number(123);</span>
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 123;<br>
+                    var y = new Number(123);<br>
+                    // typeof x returns number<br>
+                    // typeof y returns object
+                    }<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;A number can be an object, but there is no need to create a number as an object.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 123;
+                    var y = new Number(123);
+                    document.getElementById("demo").innerHTML = typeof x + "&lt;br&gt;" + typeof y;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp22.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                <mark>
+                    Do not create Number objects. It slows down execution speed.<br>
+                    The <span class="textcolor">new</span> keyword complicates the code. This can produce some unexpected results:
+                </mark>
+            </p>
+            <p>
+                When using the == operator, equal numbers are equal:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 500;<br>      
+                    var y = new Number(500);<br>
+                    
+                    // (x == y) is true because x and y have equal values<br>
+                    }<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Never create numbers as objects.&lt;/p&gt;
+                    &lt;p&gt;Numbers and objects cannot be safely compared.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 500;        // x is a number
+                    var y = new Number(500);  // y is an object
+                    document.getElementById("demo").innerHTML = (x==y);
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Numbers-Page-Examples/exp23.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+        </div>
+    </body>

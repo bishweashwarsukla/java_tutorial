@@ -1,0 +1,172 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Objects</h1>
+        <div class="basic">
+            <p>
+                You have already learned that JavaScript variables are containers for data values.
+                <br>
+                This code assigns a simple value (Fiat) to a variable named car:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var car = "Fiat";
+                </pre>
+                <a href="../Output/Object-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                Objects are variables too. But objects can contain many values.
+                <br>
+                This code assigns many values (Fiat, 500, white) to a variable named car:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var car = {type:"Fiat", model:"500", color:"white"};
+                </pre>
+                <a href="../Output/Object-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+
+
+            <h2 style="text-align:center">Object Definition</h2>
+            <p>
+                You define (and create) a JavaScript object with an object literal:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+                </pre>
+                <a href="../Output/Object-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+
+
+            <h2 style="text-align:center">Object Definition</h2>
+            <p>
+                The name:values pairs in JavaScript objects are called properties:
+            </p>
+            <table>
+                <tr>
+                  <th>Property </th>
+                  <th>Property Value</th>
+                </tr>
+                <tr>
+                  <td>firstName</td>
+                  <td>John</td>
+                </tr>
+                <tr>
+                  <td>lastName</td>
+                  <td>Doe</td>
+                </tr>
+                <tr>
+                  <td>age</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>eyeColor</td>
+                  <td>Blue</td>
+                </tr>
+              </table>
+              <br>
+
+              <h2 style="text-align:center">Accessing Object Properties</h2>
+              <p>
+                You can access object properties in two ways:
+              </p>
+              <section>
+                <pre>
+                    objectName.propertyName<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or<br>
+                    objectName["propertyName"]
+                </pre>
+            </section>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    person.lastName;
+                </pre>
+                <a href="../Output/Object-Page-Examples/exp4.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Object Methods</h2>
+            <p>
+                Objects can also have methods.<br>
+                Methods are actions that can be performed on objects.<br>
+                Methods are stored in properties as function definitions.
+            </p>
+            <table>
+                <tr>
+                  <th>Property </th>
+                  <th>Property Value</th>
+                </tr>
+                <tr>
+                  <td>firstName</td>
+                  <td>John</td>
+                </tr>
+                <tr>
+                  <td>lastName</td>
+                  <td>Doe</td>
+                </tr>
+                <tr>
+                  <td>age</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>eyeColor</td>
+                  <td>Blue</td>
+                </tr>
+                <tr>
+                  <td>fullName</td>
+                  <td>function() {return this.firstName + " " + this.lastName;}</td>
+                </tr>
+            </table>
+              <br>
+              <p>
+                  <mark>
+                    A method is a function stored as a property.
+                  </mark>
+              </p>
+              <br>
+
+
+              <h4>Example :-</h4>
+              <section>
+                  <pre>
+                    var person = {
+                        firstName: "John",
+                        lastName : "Doe",
+                        id       : 5566,
+                        fullName : function() {
+                          return this.firstName + " " + this.lastName;
+                        }
+                      };
+                  </pre>
+                </section>
+              <br>
+
+              <h2 style="text-align:center">Accessing Object Methods</h2>
+              <p>
+                You access an object method with the following syntax:
+              </p>
+              <section>
+                  <pre>
+                    objectName.methodName()
+                  </pre>
+              </section>
+
+              <h4>Example :-</h4>
+              <section>
+                  <pre>
+                    name = person.fullName();
+                  </pre>
+                  <a href="../Output/Object-Page-Examples/exp5.html" target="_blank">Run Example</a>
+              </section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+
+body
+{
+    background-color:#FF7F50;
+
+}
+.head
+{
+    background-color:#800000;
+    padding:1px;
+    color: white;
+    text-align: center;
+}
+.header
+{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer
+{
+    background-color:#f96d80;
+    padding:1px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+fieldset
+{
+    border:2px solid grey;
+    margin:15px;
+    padding: 10px;
+}
+.main-body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.submit
+{
+    padding: 28px;
+    color: black;
+    background-color: grey;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 10px;
+    opacity: 0.8;
+    
+}
+.submit:hover
+{
+    color: grey;
+    background-color:black;
+    opacity: 0.6;
+}
+.quiz
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tab1
+{
+    margin: 20px;
+
+}

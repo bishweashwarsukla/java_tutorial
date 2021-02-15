@@ -1,0 +1,85 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">Access a HTML element</h1>
+        <div class="basic">
+            <p>
+                <ul>
+                    <li>To access an HTML element from JavaScript, you can use the document.getElementById(id) method.</li>
+                    <li>Use the "id" attribute to identify the HTML element:</li>
+                </ul>
+            </p>
+            <h4>Example :-</h4>
+            <p>Access the HTML element with the specified id, and change its content:</p>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h1&gt;My First WebPage&lt;/h1&gt;
+
+                    &lt;p id="demo"&gt;My First Paragraph&lt;/p&gt;
+                    &lt;scrit&gt;
+                    document.getElementById("demo").innerHTML="My first javascript";
+                    &lt;/script&gt;    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Access-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+
+            <h4>Example :-</h4>
+            <p>JavaScript can change the style of an HTML attribute</p>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h1&gt;JavaScript Can Change Images&lt;/h1&gt;
+                    &lt;img id="myImage" onclick="changeImage()" src="bulboff.gif" width="100" height="180"&gt;
+                    &lt;p&gt;Click the light bulb to turn on/off the light.&lt;/p&gt;
+                    &lt;script&gt;
+                    function changeImage() {
+                        var image = document.getElementById('myImage');
+                        if (image.src.match("bulbon")) {
+                            image.src = "bulboff.gif";
+                        } else {
+                            image.src = "bulbon.gif";
+                        }
+                    }
+                    &lt;/script&gt;
+                    &lt;button type="button" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;  
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Access-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+
+            <h4>Example :-</h4>
+            <p>JavaScript can change the style of an HTML element</p>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h1&gt;My First WebPage&lt;/h1&gt;
+
+                    &lt;p id="demo"&gt;JavaScript can change the style of an HTML element.&lt;/p&gt;
+                    &lt;script&gt;
+                    function myFunction()
+                    {
+                        x=document.getElementById("demo") // Find the element
+                        x.style.color="#ff0000";          // Change the style
+                        }
+                    &lt;/script&gt;
+                    &lt;button type="button" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;  
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Access-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+       </div>
+    </body>
+</html>

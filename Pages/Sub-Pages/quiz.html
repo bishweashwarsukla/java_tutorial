@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Javascript Quiz</title>
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="head">
+                <h1>JavaScript Quiz</h1>   
+            </div>
+        </div>
+        <div class="main-body">
+            <form method="POST" class="quiz">
+                <table class="tab1">
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q1">1) Inside which HTML element do we put the JavaScript?</legend>
+                                <input id="A1" type="radio" name="1" value="A"/> 
+                                <label for="A1">&lt;script&gt;</label>
+                                <br>
+                                <input id="B1" type="radio" name="1" value="B"/> 
+                                <label for="B1">&lt;javascript&gt;</label>
+                                <br>
+                                <input id="C1" type="radio" name="1" value="C"> 
+                                <label for="C1">&lt;scripting&gt;</label>
+                                <br>
+                                <input id="D1" type="radio" name="1" value="D"> 
+                                <label for="C1">&lt;js&gt;</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q2">2) What is the correct JavaScript syntax to change the content of the HTML element below?<br>
+                                <p id="demo">This is a demonstration.</p></legend>
+                                <input id="A2" type="radio" name="2" value="A"/> 
+                                <label for="A1">document.getElement("p").innerHTML="Hello World!";</label>
+                                <br>
+                                <input id="B2" type="radio" name="2" value="B"/> 
+                                <label for="B2">document.getElementById("demo").innerHTML="Hello World!";</label>
+                                <br>
+                                <input id="C2" type="radio" name="2" value="C"> 
+                                <label for="C2">document.getElementByName("p").innerHTML="Hello World!";</label>
+                                <br>
+                                <input id="D2" type="radio" name="2" value="D"> 
+                                <label for="D2">#demo.innerHTML="Hello World!";</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q3">3) What is the correct place to insert a JavaScript?</legend>
+                                <input id="A3" type="radio" name="3" value="A"/> 
+                                <label for="A3">Both the <head> section and the <body> section are correct</label>
+                                <br>
+                                <input id="B3" type="radio" name="3" value="B"/> 
+                                <label for="B3">The <body> section</label>
+                                <br>
+                                <input id="C3" type="radio" name="3" value="C"> 
+                                <label for="C3">The <head> section </label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q4">4) Which is the correct syntax to display "Hello World!" in an alert box using JavaScript?</legend>
+                                <input id="A4" type="radio" name="4" value="A"/> 
+                                <label for="A4">alertbox("Hello World!");</label>
+                                <br>
+                                <input id="B4" type="radio" name="4" value="B"/> 
+                                <label for="B4">msg("Hello World!");</label>
+                                <br>
+                                <input id="C4" type="radio" name="4" value="C"> 
+                                <label for="C4">msgbox("Hello World!");</label>
+                                <br>
+                                <input id="D4" type="radio" name="4" value="D"> 
+                                <label for="D4">alert("Hello World!");</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q5">5) What is the correct syntax for referring to an external script called "geek.js" ?</legend>
+                                <input id="A5" type="radio" name="5" value="A"/> 
+                                <label for="A5">&lt;script src="geek.js"&gt;</label>
+                                <br>
+                                <input id="B5" type="radio" name="5" value="B"/> 
+                                <label for="B5">&lt;script href="geek.js"&gt;</label>
+                                <br>
+                                <input id="C5" type="radio" name="5" value="C"> 
+                                <label for="C5">&lt;script ref="geek.js"&gt;</label>
+                                <br>
+                                <input id="D5" type="radio" name="5" value="D">
+                                <label for="D5">&lt;script name=geek.js"&gt;</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q6">6) Which of the following is not a reserved word in JavaScript?</legend>
+                                <input id="A6" type="radio" name="6" value="A"/> 
+                                <label for="A6">interface</label>
+                                <br>
+                                <input id="B6" type="radio" name="6" value="B"/>
+                                <label for="B6">throws</label> 
+                                <br>
+                                <input id="C6" type="radio" name="6" value="C">
+                                <label for="C6">program</label>
+                                <br>
+                                <input id="D6" type="radio" name="6" value="D">
+                                <label for="D6">short</label> 
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q7">7) Which of the following function of String object would compare a regualar expression with a string?</legend>
+                                <input id="A7" type="radio" name="7" value="A"/> 
+                                <label for="A7">replace()</label>
+                                <br>
+                                <input id="B7" type="radio" name="7" value="B"/> 
+                                <label for="B7">search()</label>
+                                <br>
+                                <input id="C7" type="radio" name="7" value="C"> 
+                                <label for="C7">match()</label>
+                                <br>
+                                <input id="D7" type="radio" name="7" value="D">
+                                <label for="D7">concat()</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q8">8) Which of the following functions Number object would return a string version of the number that may change according to the browser's locale settings?</legend>
+                                <input id="A8" type="radio" name="8" value="A"/>
+                                <label for="A8">toString()</label>
+                                <br>
+                                <input id="B8" type="radio" name="8" value="B"/>
+                                <label for="B8">toExponential()</label>
+                                <br>
+                                <input id="C8" type="radio" name="8" value="C"/>
+                                <label for="C8">toFixed()</label>
+                                <br>
+                                <input id="D8" type="radio" name="8" value="D"/>
+                                <label for="D8">toLocaleString()</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q9">9) When interpreter encounters an empty statements,what it will do?</legend>
+                                <input id="A9" type="radio" name="9" value="A"/> 
+                                <label for="A9">shows a warning</label>
+                                <br>
+                                <input id="B9" type="radio" name="9" value="B"/> 
+                                <label for="B9">prompts to complete the statement</label>
+                                <br>
+                                <input id="C9" type="radio" name="9" value="C">
+                                <label for="C9">throws an error</label>
+                                <br>
+                                <input id="D9" type="radio" name="9" value="D"> 
+                                <label for="D9">ignores the statements</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q10">10) Which one of the following is the correct way for calling the JavaScript code?</legend>
+                                <input id="A10" type="radio" name="10" value="A"/> 
+                                <label for="A10">preprocessor</label>
+                                <br>
+                                <input id="B10" type="radio" name="10" value="B"/>
+                                <label for="B10"> trigerring event</label>
+                                <br>
+                                <input id="C10" type="radio" name="10" value="C">
+                                <label for="C10"> RMI</label>
+                                <br>
+                                <input id="D10" type="radio" name="10" value="D"> 
+                                <label for="D10">function/method</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q11">11) Which of the following type of a variable is volatile?</legend>
+                                <input id="A11" type="radio" name="11" value="A"/> 
+                                <label for="A11">mutable variable</label>
+                                <br>
+                                <input id="B11" type="radio" name="11" value="B"/> 
+                                <label for="B11">dynamic variable</label>
+                                <br>
+                                <input id="C11" type="radio" name="11" value="C">
+                                <label for="C11">volatile variable</label>
+                                <br>
+                                <input id="D11" type="radio" name="11" value="D">
+                                <label for="D11">immutable variable</label>
+                            </fieldset>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q12">12) In the JavaScript,which one of the following is not considered as an error?</legend>
+                                <input id="A12" type="radio" name="12" value="A"/> 
+                                <label for="A12">syntax error</label>
+                                <br>
+                                <input id="B12" type="radio" name="12" value="B"/> 
+                                <label for="B12">missing of semicolons</label>
+                                <br>
+                                <input id="C12" type="radio" name="12" value="C"/> 
+                                <label for="C12">division by zero</label>
+                                <br>
+                                <input id="D12" type="radio" name="12" value="D"/> 
+                                <label for="D12">missing of bracket</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q13">13) Which of the following number object function returns the value of the number?</legend>
+                                <input id="A13" type="radio" name="13" value="A"/>
+                                <label for="A13">toString()</label>
+                                <br>
+                                <input id="B13" type="radio" name="13" value="B"/>
+                                <label for="B13">valueOf()</label>
+                                <br>
+                                <input id="C13" type="radio" name="13" value="C"/>
+                                <label for="C13">toLocaleString()</label>
+                                <br>
+                                <input id="D13" type="radio" name="13" value="D"/>
+                                <label for="D13">toPrecision()</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q14">14) In JavaScript,what will be used for calling the function definition expression:</legend>
+                                <input id="A14" type="radio" name="14" value="A"/> 
+                                <label for="A14">function prototype</label>
+                                <br>
+                                <input id="B14" type="radio" name="14" value="B"/> 
+                                <label for="B14">function literal</label>
+                                <br>
+                                <input id="C14" type="radio" name="14" value="C"/> 
+                                <label for="C14">function calling</label>
+                                <br>
+                                <input id="D14" type="radio" name="14" value="D"/> 
+                                <label for="D14">function declaration</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                            <legend>15) Which one of the following is used for the calling a function or a method in the JavaScript?.</legend>
+                            <input type="radio" name="15" value="A"/> 
+                            <label for="A15">property access expression</label>
+                            <br>
+                            <input type="radio" name="15" value="B"/> 
+                            <label for="B15">functional expression</label>
+                            <br>
+                            <input type="radio" name="15" value="C"/>
+                            <label for="C15"> invocation expression</label>
+                            <br>
+                            <input type="radio" name="15" value="D"/> 
+                            <label for="D15">primary expression</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q16">16) Which one of the following operator is used to check whether a specific property exists or not?</legend>
+                                <input id="A16" type="radio" name="16" value="A"/> 
+                                <label for="A16">Exists</label>
+                                <br>
+                                <input id="B16" type="radio" name="16" value="B"/> 
+                                <label for="B16">exist</label>
+                                <br>
+                                <input id="C16" type="radio" name="16" value="C"/> 
+                                <label for="C16">within</label>
+                                <br>
+                                <input id="D16" type="radio" name="16" value="D"/> 
+                                <label for="D16">in</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q17">17) What we will get if we compare the "one" with "8" using the less than operator("one"<8)?</legend>
+                                <input id="A17" type="radio" name="17" value="A"/> 
+                                <label for="A17">False</label>
+                                <br>
+                                <input id="B17" type="radio" name="17" value="B"/> 
+                                <label for="B17">True</label>
+                                <br>
+                                <input id="C17" type="radio" name="17" value="C"/> 
+                                <label for="C17">NaN</label>
+                                <br>
+                                <input id="D17" type="radio" name="17" value="D"/> 
+                                <label for="D17">Undefined</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend for="q18">18) Which one of the following symbol is used for creating comments in the JavaScript?</legend>
+                                <input id="A18" type="radio" name="18" value="A"/>
+                                <label for="A18">\\</label>
+                                <br>
+                                <input id="B18" type="radio" name="18" value="B"/>
+                                <label for="B18">//</label>
+                                <br>
+                                <input id="C18" type="radio" name="18" value="C"/>
+                                <label for="C18">\**\</label>
+                                <br>
+                                <input id="D18" type="radio" name="18" value="D"/>
+                                <label for="D18">\**/</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                            <legend for="q19">19) Which one of the following is not considered as "statement" in JavaScript?</legend>
+                            <input id="A19" type="radio" name="19" value="A"/>
+                            <label for="A19">use strict</label>
+                            <br>
+                            <input id="B19" type="radio" name="19" value="B"/>
+                            <label for="B19">debugger</label>
+                            <br>
+                            <input id="C19" type="radio" name="19" value="C"/>
+                            <label for="C19">if</label>
+                            <br>
+                            <input id="D19" type="radio" name="19" value="D"/>
+                            <label for="D19">with</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                            <legend for="q20">20) Which company dveloped JavaScript?</legend>
+                            <input id="A20" type="radio" name="20" value="A"/>
+                            <label for="A20">Netscape</label>
+                            <br>
+                            <input id="B20" type="radio" name="20" value="B"/>
+                            <label for="B20">Bell Labs</label>
+                            <br>
+                            <input id="C20" type="radio" name="20" value="C"/>
+                            <label for="C20">Sun Microsystems</label>
+                            <br>
+                            <input id="D20" type="radio" name="20" value="C"/>
+                            <label for="D20">IBM</label>
+                            </fieldset>
+                        </td>   
+                    </tr>
+                </table>
+                <br>
+                <input class="submit" type="submit" value="Submit Test" onclick="Result()"/>
+            </form>
+            
+        </div>
+        <script>
+            function Result()
+            {
+                var ans=["A","A","D","B","A","A","B","A","B","B","C","A","B","A","A","A","B","B","C","A"];
+                var points = 0;
+                for(i = 0; i < 20;i++)
+                {
+                    var elem = document.getElementsByName(i+1);
+                    for(j = 0 ; j < elem.length;j++)
+                    {
+                        if(elem[j].checked == true)
+                        {
+                            if(ans[i] == elem[j].value)
+                            {
+                                points++;
+                            }
+                            break;
+                        } 
+                    }
+                }
+                alert("Final Score of the Candidate :- "+points);
+            }
+          </script>
+    </body>
+
+</html>

@@ -1,0 +1,937 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Data Types</h1>
+
+        <div class="basic">
+            <p>
+                JavaScript variables can hold many data types: numbers, strings, objects and more:
+            </p>
+            <section>
+                <pre>
+                    var length = 16;                               // Number<br>
+                    var lastName = "Johnson";                      // String<br>
+                    var x = {firstName:"John", lastName:"Doe"};    // Object<br>
+                </pre>
+            </section>
+            <br>
+            <h2 style="text-align:center">The Concept of Data Types</h2>
+            
+            <p>
+                In programming, data types is an important concept.
+                To be able to operate on variables, it is important to know something about the type.
+                Without data types, a computer cannot safely solve this:
+            </p>
+            <section>
+                <pre>
+                    var x = 16 + "Volvo";
+                </pre>
+            </section>
+
+            <p>
+                Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a result?
+                JavaScript will treat the example above as:
+            </p>
+            <section>
+                <pre>
+                    var x = "16" + "Volvo";
+                </pre>
+            </section>
+            <p>
+                <center>
+                    <mark>
+                        When adding a number and a string, JavaScript will treat the number as a string.
+                    </mark>  
+                </center>
+ 
+            </p>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "16" + "Volvo";
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;When adding a number and a string, JavaScript will treat the number as a string.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 16 + "Volvo";
+                    document.getElementById("demo").innerHTML = x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "Volvo" + 16;
+                </pre>
+            </section>
+            <h4><Code></Code>:-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;When adding a number and a string, JavaScript will treat the number as a string.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "Volvo" + 16;
+                    document.getElementById("demo").innerHTML = x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                JavaScript evaluates expressions from left to right. Different sequences can produce different results:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 16 + 4 + "Volvo";
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;JavaScript evaluates expressions from left to right. Different sequences can produce different results:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 16 + 4 + "Volvo";
+                    document.getElementById("demo").innerHTML = x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = "Volvo" + 16 + 4;
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;JavaScript evaluates expressions from left to right. Different sequences can produce different results:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = "Volvo" + 16 + 4;
+                    document.getElementById("demo").innerHTML = x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp4.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                In the first example, JavaScript treats 16 and 4 as numbers, until it reaches "Volvo".
+                <br>
+                In the second example, since the first operand is a string, all operands are treated as strings.
+            </p>
+
+            <h2 style="text-align:center">JavaScript Types are Dynamic</h2>
+            <p>
+                JavaScript has dynamic types.<br>
+                This means that the same variable can be used to hold different data types:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x;           // Now x is undefined<br>
+                    x = 5;           // Now x is a Number<br>
+                    x = "John";      // Now x is a String<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Data Types&lt;/h2&gt;
+                    
+                    &lt;p&gt;JavaScript has dynamic types. This means that the same variable can be used to hold different data types:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x;         // Now x is undefined
+                    x = 5;         // Now x is a Number
+                    x = "John";      // Now x is a String
+                    
+                    document.getElementById("demo").innerHTML = x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp5.html" target="_blank">Run Example</a>
+            </section>
+
+            <h2 style="text-align:center">JavaScript Strings</h2>
+            <p>
+                A string (or a text string) is a series of characters like "John Doe".<br>
+                Strings are written with quotes. You can use single or double quotes:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var carName1 = "Volvo XC60";   // Using double quotes<br>
+                    var carName2 = 'Volvo XC60';   // Using single quotes<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Strings&lt;/h2&gt;
+                    
+                    &lt;p&gt;Strings are written with quotes. You can use single or double quotes:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var carName1 = "Volvo XC60";
+                    var carName2 = 'Volvo XC60';
+                    
+                    document.getElementById("demo").innerHTML =
+                    carName1 + "&lt;br&gt;" + 
+                    carName2; 
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp6.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var answer1 = "It's alright";             // Single quote inside double quotes<br>
+                    var answer2 = "He is called 'Johnny'";    // Single quotes inside double quotes<br>
+                    var answer3 = 'He is called "Johnny"';    // Double quotes inside single quotes<br>
+                </pre>
+            </section>
+            <h4>Code:-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Strings&lt;/h2&gt;
+                    
+                    &lt;p&gt;You can use quotes inside a string, as long as they don't match the quotes surrounding the string:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var answer1 = "It's alright";
+                    var answer2 = "He is called 'Johnny'";
+                    var answer3 = 'He is called "Johnny"';
+                    
+                    document.getElementById("demo").innerHTML =
+                    answer1 + "&lt;br&gt;" + 
+                    answer2 + "&lt;br&gt;" + 
+                    answer3;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp7.html" target="_blank">Run Example</a>
+            </section>
+
+            <br>
+            <p>
+                <center>
+                    <mark>
+                        You will learn more about strings later in this tutorial
+                    </mark>
+                </center>
+            </p>
+            <br>
+
+            <h2 style="text-align:center">JavaScript Numbers</h2>
+            <p>
+                JavaScript has only one type of numbers.<br>
+                Numbers can be written with, or without decimals:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x1 = 34.00;     // Written with decimals<br>
+                    var x2 = 34;        // Written without decimals<br></pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Numbers can be written with, or without decimals:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x1 = 34.00;
+                    var x2 = 34;
+                    var x3 = 3.14;
+                    
+                    document.getElementById("demo").innerHTML =
+                    x1 + "&lt;br&gt;" + x2 + "&lt;br&gt;" + x3;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp8.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                Extra large or extra small numbers can be written with scientific (exponential) notation:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var y = 123e5;      // 12300000<br>
+                    var z = 123e-5;     // 0.00123<br>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Numbers&lt;/h2&gt;
+                    
+                    &lt;p&gt;Extra large or extra small numbers can be written with scientific (exponential) notation:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var y = 123e5;
+                    var z = 123e-5;
+                    
+                    document.getElementById("demo").innerHTML =
+                    y + "&lt;br&gt;" + z;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp9.html" target="_blank">Run Example</a>
+            </section>
+
+            <br>
+            <p>
+                <center>
+                    <mark>
+                        You will learn more about numbers later in this tutorial
+                    </mark>
+                </center>
+            </p>
+            <br>
+
+
+            <h2 style="text-align:center">JavaScript Booleans</h2>
+            <p>
+                Booleans can only have two values: <span class="textcolor">true</span> or <span class="textcolor">false</span>
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var x = 5;<br>
+                    var y = 5;<br>
+                    var z = 6;<br>
+                    (x == y)       // Returns true<br>
+                    (x == z)       // Returns false<br>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Booleans&lt;/h2&gt;
+                    
+                    &lt;p&gt;Booleans can have two values: true or false:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var x = 5;
+                    var y = 5;
+                    var z = 6;
+                    document.getElementById("demo").innerHTML =
+                    (x == y) + "&lt;br&gt;" + (x == z);
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp10.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                
+                Booleans are often used in conditional testing.
+            </p>
+            
+            <br>
+            <p>
+                <center>
+                    <mark>
+                        You will learn more about Booleans later in this tutorial
+                    </mark>
+                </center>
+            </p>
+            <br>
+
+            <h2 style="text-align:center">JavaScript Arrays</h2>
+            <p>
+                JavaScript arrays are written with square brackets.<br>
+                Array items are separated by commas.<br>
+                The following code declares (creates) an array called <span class="textcolor">cars</span>, containing three items (car names):
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var cars = ["Saab", "Volvo", "BMW"];
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Arrays&lt;/h2&gt;
+                    
+                    &lt;p&gt;Array indexes are zero-based, which means the first item is [0].&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var cars = ["Saab","Volvo","BMW"];
+                    
+                    document.getElementById("demo").innerHTML = cars[0];
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp11.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                Array indexes are zero-based, which means the first item is [0], second is [1], and so on.
+            </p>
+            
+            <br>
+            <p>
+                <center>
+                    <mark>
+                        You will learn more about Arrays later in this tutorial
+                    </mark>
+                </center>
+            </p>
+            <br>
+
+            <h2 style="text-align:center">JavaScript Objects</h2>
+            <p>
+                JavaScript objects are written with curly braces <span class="textcolor">{}</span>.<br>
+                Object properties are written as name:value pairs, separated by commas.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript Objects&lt;/h2&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var person = {
+                      firstName : "John",
+                      lastName  : "Doe",
+                      age     : 50,
+                      eyeColor  : "blue"
+                    };
+                    
+                    document.getElementById("demo").innerHTML =
+                    person.firstName + " is " + person.age + " years old.";
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp12.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor.
+            </p>
+            
+            <br>
+            <p>
+                <center>
+                    <mark>
+                        You will learn more about Obects later in this tutorial
+                    </mark>
+                </center>
+            </p>
+            <br>
+
+            <h2 style="text-align:center">The typeof Operator</h2>
+            <p>
+                You can use the JavaScript <span class="textcolor">typeof</span> operator to find the type of a JavaScript variable.<br>
+                The <span class="textcolor">typeof</span> operator returns the type of a variable or an expression:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    typeof ""             // Returns "string"<br>
+                    typeof "John"         // Returns "string"<br>
+                    typeof "John Doe"     // Returns "string"<br>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript typeof&lt;/h2&gt;
+                    &lt;p&gt;The typeof operator returns the type of a variable or an expression.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    document.getElementById("demo").innerHTML = 
+                    typeof "" + "&lt;br&gt;" +
+                    typeof "John" + "&lt;br&gt;" + 
+                    typeof "John Doe";
+                    &lt;/script&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp13.html" target="_blank">Run Example</a>
+            </section>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    typeof 0              // Returns "number"<br>
+                    typeof 314            // Returns "number"<br>
+                    typeof 3.14           // Returns "number"<br>
+                    typeof (3)            // Returns "number"<br>
+                    typeof (3 + 4)        // Returns "number"<br>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript typeof&lt;/h2&gt;
+                    &lt;p&gt;The typeof operator returns the type of a variable or an expression.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    document.getElementById("demo").innerHTML = 
+                    typeof 0 + "&lt;br&gt;" + 
+                    typeof 314 + "&lt;br&gt;" +
+                    typeof 3.14 + "&lt;br&gt;" +
+                    typeof (3) + "&lt;br&gt;" +
+                    typeof (3 + 4);
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp14.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Undefined</h2>
+            <p>
+                In JavaScript, a variable without a value, has the value <span class="textcolor">undefined</span>.
+                The type is also <span class="textcolor">undefined</span>.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var car;    // Value is undefined, type is undefined
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;The value (and the data type) of a variable with no value is &lt;b&gt;undefined&lt;/b&gt;.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var car;
+                    document.getElementById("demo").innerHTML =
+                    car + "&lt;br&gt;" + typeof car;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp15.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                Any variable can be emptied, by setting the value to <span class="textcolor">undefined</span>.
+                The type will also be <span class="textcolor">undefined</span>.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    car = undefined;    // Value is undefined, type is undefined
+                </pre>
+            </section>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;Variables can be emptied if you set the value to &lt;b&gt;undefined&lt;/b&gt;.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var car = "Volvo";
+                    car = undefined;
+                    document.getElementById("demo").innerHTML =
+                    car + "&lt;br&gt;" + typeof car;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp16.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+            <h2 style="text-align:center">Empty Values</h2>
+            <p>
+                An empty value has nothing to do with <span class="textcolor">undefined</span>.<br>
+                An empty string has both a legal value and a type.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var car = "";    // The value is "", the typeof is "string"
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;An empty string has both a legal value and a type:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var car = "";
+                    document.getElementById("demo").innerHTML =
+                    "The value is: " +
+                    car + "&lt;br&gt;" +
+                    "The type is: " + typeof car;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp17.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+            <h2 style="text-align:center">Null</h2>
+            <p>
+                In JavaScript <span class="textcolor">null</span> is "nothing". It is supposed to be something that doesn't exist.<br>
+                Unfortunately, in JavaScript, the data type of <span class="textcolor">null</span> is an object.
+                <br>
+                <center>
+                    <mark>
+                        You can consider it a bug in JavaScript that typeof <span class="textcolor">null</span> is an object. It should be <span class="textcolor">null</span>.
+                    </mark>
+                </center>
+                <br>
+                You can empty an object by setting it to <span class="textcolor">null</span>:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};<br>
+                    person = null;    // Now value is null, but type is still an object
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;Objects can be emptied by setting the value to &lt;b&gt;null&lt;/b&gt;.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+                    person = null;
+                    document.getElementById("demo").innerHTML = typeof person;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp18.html" target="_blank">Run Example</a>
+            </section>
+
+            
+            <h2 style="text-align:center">Difference Between Undefined and Null</h2>
+            <p>
+                <span class="textcolor">undefined</span> and <span class="textcolor">null</span> are equal in value but different in type:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    typeof undefined           // undefined<bR>
+                    typeof null                // object<br><Br>
+                    
+                    null === undefined         // false<br>
+                    null == undefined          // true<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript&lt;/h2&gt;
+                    
+                    &lt;p&gt;Undefined and null are equal in value but different in type:&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    document.getElementById("demo").innerHTML =
+                    typeof undefined + "&lt;br&gt;" +
+                    typeof null + "&lt;br&gt;&lt;br&gt;" +
+                    (null === undefined) + "&lt;br&gt;" +
+                    (null == undefined);
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp19.html" target="_blank">Run Example</a>
+            </section>
+
+                       
+            <h2 style="text-align:center">Primitive Data</h2>
+            <p>
+                A primitive data value is a single simple data value with no additional
+                properties and methods.<br>
+                The <span class="textcolor">typeof</span> operator can return one of these primitive types:
+                <ul>
+                    <span class="textcolor">
+                        <li>string</li>
+                        <li>number</li>
+                        <li>boolean</li>
+                        <li>undefined</li>
+                    </span>
+                </ul>
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    typeof "John"              // Returns "string"<br>
+                    typeof 3.14                // Returns "number"<br>
+                    typeof true                // Returns "boolean"<br>
+                    typeof false               // Returns "boolean"<br>
+                    typeof x                   // Returns "undefined" (if x has no value)<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript typeof&lt;/h2&gt;
+                    &lt;p&gt;The typeof operator returns the type of a variable or an expression.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    document.getElementById("demo").innerHTML = 
+                    typeof "john" + "&lt;br&gt;" + 
+                    typeof 3.14 + "&lt;br&gt;" +
+                    typeof true + "&lt;br&gt;" +
+                    typeof false + "&lt;br&gt;" +
+                    typeof x;
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp20.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+            <h2 style="text-align:center">Complex Data</h2>
+            <p>
+                The <span class="textcolor">typeof</span> operator can return one of two complex types:<br>
+                <ul>                   
+                        <li><span class="textcolor">function</span></li>
+                        <li><span class="textcolor">object</span></li>
+                </ul>
+                The <span class="textcolor">typeof</span> operator returns "object" for objects, arrays, and null.<br>
+                The <span class="textcolor">typeof</span> operator does not return "object" for functions.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    typeof {name:'John', age:34} // Returns "object"<br>
+                    typeof [1,2,3,4]             // Returns "object" (not "array", see note below)<br>
+                    typeof null                  // Returns "object"<br>
+                    typeof function myFunc(){}   // Returns "function"<br>
+                </pre>
+            </section>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    
+                    &lt;h2&gt;JavaScript typeof&lt;/h2&gt;
+                    &lt;p&gt;The typeof operator returns object for both objects, arrays, and null.&lt;/p&gt;
+                    &lt;p&gt;The typeof operator does not return object for functions.&lt;/p&gt;
+                    
+                    &lt;p id="demo"&gt;&lt;/p&gt;
+                    
+                    &lt;script&gt;
+                    document.getElementById("demo").innerHTML = 
+                    typeof {name:'john', age:34} + "&lt;br&gt;" +
+                    typeof [1,2,3,4] + "&lt;br&gt;" +
+                    typeof null + "&lt;br&gt;" +
+                    typeof function myFunc(){};
+                    &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    
+                </pre>
+                <a href="../Output/DataTypes-Page-Examples/exp21.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+        </div>
+    </body>
+</html>

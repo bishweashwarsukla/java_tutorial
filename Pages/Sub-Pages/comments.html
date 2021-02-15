@@ -1,0 +1,176 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Comments</h1>
+        <br>
+        <h2 style="text-align:center">JavaScript Single Comments</h2>
+        <div class="basic">
+            <p>
+                <ul>
+                    <li>JavaScript comments can be used to make the code more readable.</li>
+                    <li>Comments will not be executed by JavaScript.</li>
+                    <li>Comments can be added to explain the JavaScript, or to make the code more readable.</li>
+                    <li>Single line comments start with //</li>
+                </ul>
+                <br>
+                The following example uses single line comments to explain the code:
+            </p>
+
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                // Write to a heading:<br>
+                document.getElementById("myH1").innerHTML="Welcome to my Homepage";<br>
+                // Write to a paragraph:<br>
+                document.getElementById("myP").innerHTML="This is my first paragraph.";
+                </pre>
+            </section>
+
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+
+                    &lt;h1 id="myH"&gt;&lt;/h1&gt;
+                    &lt;p id="myP"&gt;&lt;/p&gt;
+
+                    &lt;script&gt;
+                    // Write to a heading:
+                    document.getElementById("myH").innerHTML="Welcome to my homepage";
+                    // Write to a paragraph:
+                    document.getElementById("myP").innerHTML="This is my first paragraph.";
+                    &lt;/script&gt;    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Comment-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+            <h2 style="text-align:center">JavaScript Multi-Line Comments</h2>
+            
+            <p>
+                Multi line comments start with /* and end with */ .
+                <br>
+                The following example uses a multi line comment to explain the code: 
+            </p>
+            <h4>Example :-</h4>
+            <section>    
+                <pre>
+
+                    /*<br>
+                    The code below will write<br>
+                    to a heading and to a paragraph,<br>
+                    and will represent the start of<br>
+                    my homepage:<br>
+                    */<br>
+                    document.getElementById("myH1").innerHTML="Welcome to my Homepage";<br>
+                    document.getElementById("myP").innerHTML="This is my first paragraph.";<br>
+
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+
+                    &lt;h1 id="myH"&gt;&lt;/h1&gt;
+                    &lt;p id="myP"&gt;&lt;/p&gt;
+
+                    &lt;script&gt;
+                    /*
+                    The code below will change
+                    the heading with id = "myH"
+                    and the paragraph with id = "myP"
+                    */
+                    document.getElementById("myH").innerHTML="Welcome to my homepage";
+                    document.getElementById("myP").innerHTML="This is my first paragraph.";
+                    &lt;/script&gt;    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Comment-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+
+            <br>
+            <h2 style="text-align:center">Using Comments to Prevent Execution</h2>
+            
+            
+            <p>
+                Using comments to prevent execution of code is suitable for code testing.<br>
+                Adding // in front of a code line changes the code lines from an executable line to a comment.
+            </p>
+            
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    //document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+                    document.getElementById("myP").innerHTML="This is my first paragraph.";
+                    In the following example the comment is used to prevent the execution of a code block (can be suitable for debugging):    
+                </pre>
+            </section>
+            <p>
+                </p>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                    &lt;h2&gt;JavaScript Comments&lt;/h2&gt;
+                    &lt;h1 id="myH"&gt;&lt;/h1&gt;
+                    &lt;p id="myP"&gt;&lt;/p&gt;
+
+                    &lt;script&gt;
+                    //document.getElementById("myH").innerHTML="My first Page";
+                    document.getElementById("myP").innerHTML="My first paragraph.";
+                    &lt;/script&gt;
+                    &lt;p&gt;The line starting with // is not executed.&lt;/p&gt;    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Comment-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+
+            <br>
+            <h2 style="text-align:center">Using Comments at the end of line</h2>
+            
+            <p>
+                In the following example the comment is placed at the end of a code line:
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                
+                    document.getElementById("myH1").innerHTML="Welcome to my Homepage";// Write to a heading<br>
+                    
+                    document.getElementById("myP").innerHTML="This is my first paragraph.";// Write to a paragraph<br>
+                </pre>
+            </section>
+            <h4>Code :-</h4>
+            <section>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+
+                    &lt;h1 id="myH"&gt;&lt;/h1&gt;
+                    &lt;p id="myP"&gt;&lt;/p&gt;
+
+                    &lt;script&gt;
+                    document.getElementById("myH").innerHTML="Welcome to my homepage"; // change heading
+                    document.getElementById("myP").innerHTML="This is my first paragraph."; //change paragraph
+                    &lt;/script&gt;    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <a href="../Output/Comment-Page-Examples/exp4.html" target="_blank">Run Example</a>
+            </section>
+       </div>
+    </body>
+</html>

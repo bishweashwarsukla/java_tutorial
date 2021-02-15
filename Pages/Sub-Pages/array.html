@@ -1,0 +1,161 @@
+<html>
+    <head>
+            <link href="substyle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align:center">JavaScript Arrays</h1>
+        <div class="basic">
+            <p>
+                JavaScript arrays are used to store multiple values in a single variable.
+            </p>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var cars = ["Saab", "Volvo", "BMW"];
+                </pre>
+                <a href="../Output/Array-Page-Examples/exp1.html" target="_blank">Run Example</a>
+            </section>
+
+
+            <h2 style="text-align:center">What is an Array?</h2>
+            <p>
+                An array is a special variable, which can hold more than one value at a time.<br>
+                If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+            </p>
+            <section>
+                <pre>
+                    var car1 = "Saab";<br>
+                    var car2 = "Volvo";<br>
+                    var car3 = "BMW";
+                </pre>
+            </section>
+            <p>
+                However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?<br>
+                The solution is an array!<br>
+                An array can hold many values under a single name, and you can access the values by referring to an index number.
+            </p>
+            <h2 style="text-align:center">Creating an Array</h2>
+            <p>
+                Using an array literal is the easiest way to create a JavaScript Array
+            </p>
+            <h5>Syntax :-</h5>
+            <section>
+                <pre>
+                    var array_name = [item1, item2, ...];  
+                </pre>
+            </section>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var cars = ["Saab", "Volvo", "BMW"];
+                </pre>
+                <a href="../Output/Array-Page-Examples/exp2.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Access the Elements of an Array</h2>
+            <p>
+                You access an array element by referring to the index number.<br>
+                This statement accesses the value of the first element in <span class="textcolor">cars</span>:
+            </p>
+            <section>
+                <pre>
+                    var name = cars[0];
+                </pre>
+            </section>
+            <h4>Example :-</h4>
+            <section>
+                <pre>
+                    var cars = ["Saab", "Volvo", "BMW"];
+                    document.getElementById("demo").innerHTML = cars[0];
+                </pre>
+                <a href="../Output/Array-Page-Examples/exp3.html" target="_blank">Run Example</a>
+            </section>
+            <p>
+                <mark>
+                    Note: Array indexes start with 0.
+                    <br>
+                    [0] is the first element. [1] is the second element.
+                </mark>
+            </p>
+            <br>
+
+
+            <h2 style="text-align:center">Arrays are Objects</h2>
+            <p>
+                Arrays are a special type of objects. The <span class="textcolor">typeof</span> operator in JavaScript returns "object" for arrays.
+                But, JavaScript arrays are best described as arrays.
+                Arrays use numbers to access its "elements". In this example, <span class="textcolor">person[0]</span> returns John:
+            </p>
+
+            <h4>Array</h4>
+            <section>
+                <pre>
+                    var person = ["John", "Doe", 46];
+                </pre>
+                <a href="../Output/Array-Page-Examples/exp4.html" target="_blank">Run Example</a>
+            </section>
+
+            <p>
+                Objects use names to access its "members". In this example, <span class="textcolor">person.firstName</span> returns John:
+            </p>
+
+            <h4>Object</h4>
+            <section>
+                <pre>
+                    var person = {firstName:"John", lastName:"Doe", age:46};
+                </pre>
+                <a href="../Output/Array-Page-Examples/exp5.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+
+            <h2 style="text-align:center">Array Properties and Methods</h2>
+            <p>
+                The real strength of JavaScript arrays are the built-in array properties and methods:
+            </p>
+            <section>
+                <pre>
+                    var x = cars.length;   // The length property returns the number of elements<br>
+                    var y = cars.sort();   // The sort() method sorts arrays
+                </pre>
+            </section>
+
+
+            <h2 style="text-align:center">When to Use Arrays. When to use Objects.</h2>
+            <p>
+                <ul>
+                    <li>JavaScript does not support associative arrays.</li>
+                    <li>You should use objects when you want the element names to be strings (text).</li>
+                    <li>You should use arrays when you want the element names to be numbers.</li>
+                </ul>
+            </p>
+
+            <h2 style="text-align:center">Avoid new Array()</h2>
+            <p>
+                There is no need to use the JavaScript's built-in array constructor<span class="textcolor">new</span> Array().
+                Use <span class="textcolor">[]</span> instead.
+                These two different statements both create a new empty array named points:
+            </p>
+            <section>
+                <pre>
+                    var points = new Array();     // Bad<br>
+                    var points = [];              // Good 
+                </pre>
+            </section>
+            <p>
+                These two different statements both create a new array containing 6 numbers:
+            </p>
+            <section>
+                <pre>
+                    var points = new Array(40, 100, 1, 5, 25, 10); // Bad<br>
+                    var points = [40, 100, 1, 5, 25, 10];          // Good
+                </pre>
+                <a href="../Output/Array-Page-Examples/exp5.html" target="_blank">Run Example</a>
+            </section>
+            <br>
+
+        </div>
+    </body>
+</html>
